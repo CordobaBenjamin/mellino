@@ -42,11 +42,10 @@ export default function Home() {
               <InfoSection />
           </section>
 
-
-          {/* Google Map */}
-        {/*<section className="py-8">*/}
-        {/*  <GoogleMap />*/}
-        {/*</section>*/}
+          {/*Google Map */}
+        <section className="py-8">
+          <GoogleMap />
+        </section>
 
         {/* Reseñas de Google */}
         {/*<section className="py-8 bg-white">*/}
