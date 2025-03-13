@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://mellinopescaderia.com.ar/sitemap.xml

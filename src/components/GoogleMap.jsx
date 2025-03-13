@@ -1,39 +1,61 @@
 'use client';
 
-import { GoogleMap, LoadScript, Marker } from '@react-google-maps/api';
-
-const containerStyle = {
-    width: '100%',
-    height: '400px'
-};
-
-const center = {
-    lat: -34.6037,
-    lng: -58.3816
-};
+import { useState } from 'react';
 
 const branches = [
-    { lat: -34.6037, lng: -58.3816, title: 'Sucursal 1' },
-    { lat: -34.6137, lng: -58.3816, title: 'Sucursal 2' }
+    {
+        name: 'Villa Madero',
+        address: 'Dirección 1, Buenos Aires',
+        mapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26247.780419331804!2d-58.53395622568359!3d-34.680642199999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc9d9ca706bb1%3A0x8bae7bc5da9475c0!2sPescader%C3%ADa%20Mellino!5e0!3m2!1ses-419!2sar!4v1741822922720!5m2!1ses-419!2sar'
+    },
+    {
+        name: 'Bustamante',
+        address: 'Dirección 2, Buenos Aires',
+        mapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26247.780419331804!2d-58.53395622568359!3d-34.680642199999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc92170503825%3A0x638a133465bcdf9c!2sPescader%C3%ADa%20Mellino!5e0!3m2!1ses-419!2sar!4v1741821905867!5m2!1ses-419!2sar'
+    }
 ];
 
-export default function MyGoogleMap() {
+export default function BranchSelector() {
+    const [activeIndex, setActiveIndex] = useState(0);
+
     return (
-        <LoadScript googleMapsApiKey={process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}>
-            <GoogleMap
-                mapContainerStyle={containerStyle}
-                center={center}
-                zoom={12}
-                options={{ mapId: process.env.NEXT_PUBLIC_MAP_ID }}
-            >
+        <div style={{ display: 'flex', alignItems: 'center', width: '100%', height: '450px' }}>
+            {/* Datos y botones */}
+            <div style={{ width: '30%', padding: '20px' }}>
+                <h2 className={'text-blue-400'}>{branches[activeIndex].name}</h2>
+                <p className={'text-blue-400'}>{branches[activeIndex].address}</p>
                 {branches.map((branch, index) => (
-                    <Marker
+                    <button
                         key={index}
-                        position={{ lat: branch.lat, lng: branch.lng }}
-                        title={branch.title}
-                    />
+                        onClick={() => setActiveIndex(index)}
+                        style={{
+                            display: 'block',
+                            marginTop: '10px',
+                            padding: '10px',
+                            background: index === activeIndex ? '#002B5B' : '#ccc',
+                            color: 'white',
+                            border: 'none',
+                            cursor: 'pointer',
+                            width: '100%'
+                        }}
+                    >
+                        {branch.name}
+                    </button>
                 ))}
-            </GoogleMap>
-        </LoadScript>
+            </div>
+
+            {/* Mapa */}
+            <div style={{ width: '70%' }}>
+                <iframe
+                    src={branches[activeIndex].mapUrl}
+                    width="100%"
+                    height="450px"
+                    style={{ border: 0 }}
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                ></iframe>
+            </div>
+        </div>
     );
 }

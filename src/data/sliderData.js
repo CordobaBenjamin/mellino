@@ -70,23 +70,28 @@ export const sliderImageTextData = [
     }
 ];
 
-// Nuevo apartado para información de contacto
+// Información de contacto actualizada
 export const contactInfoData = {
     openDaysTitle: 'ABIERTO TODOS LOS DÍAS',
     openDaysSchedule: '11:30 - 16:00 hs | 19:00 - 1:00 hs.',
     address: {
-        mapLink: 'https://www.google.com/maps?q=Guatemala+469+Buenos+Aires',
-        line1: 'Guatemala 469 (esquina Gurruchaga)',
-        line2: 'Palermo Viejo, C.A.B.A',
+        mapLink: 'https://www.google.com/maps?q=Av+Crovara+154,+Villa+Madero,+Buenos+Aires',
+        line1: 'Av. Crovara 154,',
+        line2: 'B1751 Villa Madero, Provincia de Buenos Aires',
         line3: 'Argentina'
     },
     phones: [
-        { link: 'tel:541148315054', display: '(5411) 4831-5054' },
-        { link: 'tel:541148326058', display: '(5411) 4832-6058' },
-        { link: 'tel:541153115688', display: '(5411) 5311-5688' }
+        { link: 'tel:+541128317254', display: '(5411) 2831-7254' },
+        { link: 'tel:+541148726828', display: '(5411) 4872-6828' },
+        { link: 'tel:+541150015688', display: '(5411) 5001-5688' }
     ],
     email: {
-        link: 'mailto:info@parrilladojuliio.com.ar',
-        display: 'info@parrilladojuliio.com.ar'
+        link: 'mailto:info@mellinopescaderia.com.ar',
+        display: 'info@mellinopescaderia.com.ar'
+    },
+    socialMedia: {
+        facebook: 'https://www.facebook.com/mellinopescaderia',
+        instagram: 'https://www.instagram.com/mellinopescaderia',
+        whatsapp: 'https://wa.me/5491128317254'
     }
 };

@@ -9,6 +9,9 @@ import InfoSection from '@/components/infoSection';
 
 import GoogleMap from '@/components/GoogleMap';
 import GoogleReviews from '@/components/GoogleReviews';
+import Footer from "@/components/Footer";
+import WhatsAppButton from "@/components/WhatsappButton";
+import DiscountWheel from "@/components/DiscountWheel";
 
 
 
@@ -16,6 +19,17 @@ import GoogleReviews from '@/components/GoogleReviews';
 export default function Home() {
   return (
       <main className="min-h-screen bg-white ">
+
+
+          {/* Contenido de la página */}
+          <DiscountWheel />
+
+          {/*Whatsapp Button*/}
+          <section className="py-8">
+              <WhatsAppButton />
+          </section>
+
+
           {/* Titulo principal */}
           <div className="text-center py-8">
               <h1 className="text-6xl font-extrabold text-blue-950">Mellino</h1>
@@ -47,10 +61,15 @@ export default function Home() {
           <GoogleMap />
         </section>
 
-        {/* Reseñas de Google */}
-        {/*<section className="py-8 bg-white">*/}
-        {/*  <GoogleReviews />*/}
-        {/*</section>*/}
+          {/*Google Map */}
+          <section className="py-8">
+              <GoogleReviews />
+          </section>
+
+          {/*Footer */}
+          <section className="py-8">
+              <Footer />
+          </section>
       </main>
   );
 }
