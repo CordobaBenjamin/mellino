@@ -1,3 +1,4 @@
+// src/components/GoogleReviews.jsx
 "use client";
 
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -46,7 +47,7 @@ const reviews = [
 
 export default function GoogleReviews() {
     return (
-        <section className="py-12 bg-blue-50 text-center">
+        <section className="py-12 bg-blue-50">
             <Swiper
                 modules={[Pagination, Autoplay]}
                 pagination={{ clickable: true }}
@@ -55,34 +56,31 @@ export default function GoogleReviews() {
                 slidesPerView={1}
                 loop={true}
                 breakpoints={{
-                    768: { slidesPerView: 2 }, // 2 opiniones en tablets
-                    1024: { slidesPerView: 3 }, // 3 opiniones en desktop
+                    768: { slidesPerView: 2 },
+                    1024: { slidesPerView: 3 },
                 }}
                 className="max-w-6xl mx-auto"
             >
                 {reviews.map((review, index) => (
                     <SwiperSlide key={index}>
                         <div className="bg-white p-6 rounded-lg shadow-lg border border-gray-200 text-left">
-                            {/* Foto y nombre */}
                             <div className="flex items-center gap-4">
                                 <img
                                     src={review.profilePic}
                                     alt={review.name}
-                                    className="w-12 h-12 rounded-full"
+                                    className="w-12 h-12 rounded-full object-cover"
                                 />
                                 <div>
-                                    <p className="font-semibold text-gray-900">{review.name}</p>
+                                    <p className="font-semibold text-blue-900">{review.name}</p>
                                     <p className="text-gray-500 text-sm">{review.date}</p>
                                 </div>
                             </div>
-                            {/* Estrellas */}
                             <div className="flex mt-2 text-yellow-500">
                                 {Array.from({ length: review.rating }).map((_, i) => (
                                     <FaStar key={i} />
                                 ))}
                             </div>
-                            {/* Opinión */}
-                            <p className="mt-3 text-gray-700 text-sm">{review.comment}</p>
+                            <p className="mt-3 text-blue-800 text-sm">{review.comment}</p>
                         </div>
                     </SwiperSlide>
                 ))}

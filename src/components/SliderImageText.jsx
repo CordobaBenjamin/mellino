@@ -1,3 +1,4 @@
+// src/components/SliderImageText.jsx
 'use client';
 
 import { useEffect, useState } from 'react';
@@ -11,7 +12,7 @@ import { sliderImageTextData } from '@/data/sliderData';
 function LoadingSpinner() {
     return (
         <div className="flex items-center justify-center h-64">
-            <div className="animate-spin rounded-full h-10 w-10 border-t-2 border-b-2 border-gray-900"></div>
+            <div className="animate-spin rounded-full h-10 w-10 border-t-2 border-b-2 border-blue-900"></div>
         </div>
     );
 }
@@ -23,12 +24,11 @@ export default function SliderImageText() {
     useEffect(() => {
         try {
             if (!sliderImageTextData || sliderImageTextData.length === 0) {
-                throw new Error("No hay datos para mostrar en el slider.");
+                throw new Error('No hay datos para mostrar en el slider.');
             }
-            // Simula un retardo para mostrar un loading profesional
             const timer = setTimeout(() => {
                 setIsLoading(false);
-            }, 100);
+            }, 200);
             return () => clearTimeout(timer);
         } catch (err) {
             setError(err.message);
@@ -54,23 +54,23 @@ export default function SliderImageText() {
 
     return (
         <div className="max-w-7xl mx-auto px-4 flex flex-col md:flex-row gap-8">
-            {/* Texto Fijo */}
-            <div className="md:w-1/2 flex items-center justify-center bg-white shadow p-4">
-                <p className="text-lg text-blue-950">
-                    <strong>Lo mejor del mar</strong> directo a tu mesa. Calidad garantizada y frescura incomparable.
+            <div className="md:w-1/2 flex items-center justify-center bg-blue-100 shadow-lg p-6 rounded-lg">
+                <p className="text-lg text-blue-900 font-semibold leading-relaxed">
+                    <strong className="text-blue-950">Lo mejor del mar</strong> directo a tu mesa.
+                    Calidad garantizada y frescura incomparable.
                 </p>
             </div>
-            {/* Slider de Imágenes */}
+
             <div className="md:w-1/2">
                 <Swiper
                     loop
-                    autoplay={{ delay: 5000, disableOnInteraction: false }}
+                    autoplay={{ delay: 4000, disableOnInteraction: false }}
                     modules={[Autoplay]}
                     className="h-64"
                 >
                     {sliderImageTextData.map((slide, index) => (
                         <SwiperSlide key={index}>
-                            <div className="relative w-full h-64">
+                            <div className="relative w-full h-64 rounded-lg overflow-hidden shadow">
                                 <Image
                                     src={slide.image}
                                     alt={slide.alt}

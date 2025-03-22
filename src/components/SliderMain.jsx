@@ -11,7 +11,7 @@ import { sliderMainData } from '@/data/sliderData';
 function LoadingSpinner() {
     return (
         <div className="flex items-center justify-center h-64">
-            <div className="animate-spin rounded-full h-10 w-10 border-t-2 border-b-2 border-gray-900"></div>
+            <div className="animate-spin rounded-full h-10 w-10 border-t-2 border-b-2 border-blue-900"></div>
         </div>
     );
 }
@@ -22,14 +22,12 @@ export default function SliderMain() {
 
     useEffect(() => {
         try {
-            // Verifica que existe data para el slider
             if (!sliderMainData || sliderMainData.length === 0) {
-                throw new Error("No hay datos para mostrar en el slider.");
+                throw new Error('No hay datos para mostrar en el slider.');
             }
-            // Simula un retardo en la carga para mostrar el spinner de forma profesional
             const timer = setTimeout(() => {
                 setIsLoading(false);
-            }, 100);
+            }, 200);
             return () => clearTimeout(timer);
         } catch (err) {
             setError(err.message);
@@ -59,7 +57,7 @@ export default function SliderMain() {
                 loop
                 autoplay={{ delay: 3000, disableOnInteraction: false }}
                 modules={[Autoplay]}
-                className="w-full h-96"
+                className="w-full h-64 md:h-96 rounded-lg shadow"
             >
                 {sliderMainData.map((item, index) => (
                     <SwiperSlide key={index}>

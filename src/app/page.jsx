@@ -6,70 +6,67 @@ import SliderMain from '@/components/SliderMain';
 import SliderDishes from '@/components/SliderDishes';
 import SliderImageText from '@/components/SliderImageText';
 import InfoSection from '@/components/infoSection';
-
 import GoogleMap from '@/components/GoogleMap';
 import GoogleReviews from '@/components/GoogleReviews';
-import Footer from "@/components/Footer";
-import WhatsAppButton from "@/components/WhatsappButton";
-import DiscountWheel from "@/components/DiscountWheel";
-
-
-
+import Footer from '@/components/Footer';
+import WhatsAppButton from '@/components/WhatsappButton';
+import DiscountWheel from '@/components/DiscountWheel';
 
 export default function Home() {
-  return (
-      <main className="min-h-screen bg-white ">
+    return (
+        <main className="min-h-screen bg-blue-50">
+            <DiscountWheel />
+
+            <section className="fixed bottom-4 right-4 z-50">
+                <WhatsAppButton />
+            </section>
+
+            <header
+                className="text-center py-12 md:py-16 bg-gradient-to-b from-blue-200 to-blue-50 text-blue-900"
+                style={{ fontFamily: '"Merriweather", serif' }}
+            >
+                <h1 className="text-4xl sm:text-5xl md:text-7xl font-extrabold tracking-wider">
+                    Mellino
+                </h1>
+                <p className="mt-4 sm:mt-6 text-base sm:text-xl md:text-2xl">
+                    7:30 - 13:00 hs. | 16:00 - 20:00 hs.
+                </p>
+            </header>
 
 
-          {/* Contenido de la página */}
-          <DiscountWheel />
+            <section className="py-12 bg-gradient-to-b from-blue-50 to-white">
+                <div className="max-w-7xl mx-auto">
+                    <SliderMain />
+                </div>
+            </section>
 
-          {/*Whatsapp Button*/}
-          <section className="py-8">
-              <WhatsAppButton />
-          </section>
+            <section className="py-12 bg-gradient-to-b from-white to-blue-50">
+                <div className="max-w-7xl mx-auto">
+                    <SliderDishes />
+                </div>
+            </section>
 
+            <section className="py-12 bg-gradient-to-b from-blue-50 to-white">
+                <div className="max-w-7xl mx-auto">
+                    <SliderImageText />
+                </div>
+            </section>
 
-          {/* Titulo principal */}
-          <div className="text-center py-8">
-              <h1 className="text-6xl font-extrabold text-blue-950">Mellino</h1>
-              <h2 className="mt-4 text-2xl text-blue-800">
-                  7:30 - 13:00 hs. | 16:00 - 20:00 hs.
-              </h2>
-          </div>
-        {/* Slider principal */}
-        <section className="py-8 bg-gray-200">
-          <SliderMain />
-        </section>
+            <section className="py-12 bg-gradient-to-b from-white to-blue-50">
+                <InfoSection />
+            </section>
 
-        {/* Slider de platillos */}
-        <section className="py-8 bg-white">
-          <SliderDishes />
-        </section>
+            <section className="py-12 bg-gradient-to-b from-blue-50 to-white">
+                <GoogleMap />
+            </section>
 
-        {/* Slider con imagen + texto fijo */}
-        <section className="py-8 bg-gray-200">
-          <SliderImageText />
-        </section>
+            <section className="py-12 bg-gradient-to-b from-white to-blue-50">
+                <GoogleReviews />
+            </section>
 
-          <section className="py-8 bg-white">
-              <InfoSection />
-          </section>
-
-          {/*Google Map */}
-        <section className="py-8">
-          <GoogleMap />
-        </section>
-
-          {/*Google Map */}
-          <section className="py-8">
-              <GoogleReviews />
-          </section>
-
-          {/*Footer */}
-          <section className="py-8">
-              <Footer />
-          </section>
-      </main>
-  );
+            <footer className="bg-blue-900 text-white">
+                <Footer />
+            </footer>
+        </main>
+    );
 }
