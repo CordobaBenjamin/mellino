@@ -12,11 +12,13 @@ import Footer from '@/components/Footer';
 import WhatsAppButton from '@/components/WhatsappButton';
 import DiscountWheel from '@/components/DiscountWheel';
 import OfferPopup from '@/components/offerPopup';
+import DiscountPopup from "@/components/offerPopup";
+import DiscountWheelPopup from "@/components/DiscountWheel";
 
 export default function Home() {
     return (
         <main className="min-h-screen bg-blue-50">
-            <DiscountWheel />
+            <DiscountWheelPopup />
             <OfferPopup />
 
             <section className="fixed bottom-4 right-4 z-50">

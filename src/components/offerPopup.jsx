@@ -38,20 +38,22 @@ export default function OfferPopup() {
     if (!showPopup) return null;
 
     return (
-        <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center z-50">
-            <div className="bg-white p-4 rounded shadow-xl relative w-[80%] h-[80%] border border-gray-300">
-                <button
-                    onClick={() => setShowPopup(false)}
-                    className="absolute top-2 right-2 text-gray-500 hover:text-gray-700 text-2xl"
-                >
-                    ✖
-                </button>
+        <div className="fixed inset-0 flex items-center justify-center z-50">
+            <div className="bg-white p-4 rounded shadow-xl relative w-[90vw] aspect-video md:w-[80%] md:h-[80%] md:aspect-auto border border-gray-300 flex flex-col">
+                <div className="flex justify-end">
+                    <button
+                        onClick={() => setShowPopup(false)}
+                        className="text-gray-500 hover:text-gray-700 text-2xl"
+                    >
+                        ✖
+                    </button>
+                </div>
                 {isLoading ? (
                     <LoadingSpinner />
                 ) : error ? (
                     <p className="text-center text-red-500">{error}</p>
                 ) : (
-                    <div className="w-full h-[85%] overflow-hidden relative">
+                    <div className="w-full h-full overflow-hidden relative">
                         <Swiper
                             loop
                             autoplay={{ delay: 3000, disableOnInteraction: false }}
@@ -73,7 +75,9 @@ export default function OfferPopup() {
                         </Swiper>
                     </div>
                 )}
-                <div className="text-center font-bold text-blue-600 mt-2 text-xl">SOLO POR ESTA SEMANA, NUESTROS PESCADOS A $8999/KG</div>
+                <div className="text-center font-bold text-blue-600 mt-2 text-xl">
+                    SOLO POR ESTA SEMANA, NUESTROS PESCADOS A $8999/KG
+                </div>
             </div>
         </div>
     );

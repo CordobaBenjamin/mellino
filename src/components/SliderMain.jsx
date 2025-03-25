@@ -67,6 +67,8 @@ export default function SliderMain() {
                                 alt={`Slider image ${index + 1}`}
                                 fill
                                 className="object-cover"
+                                loading="eager"
+                                priority
                             />
                         </div>
                     </SwiperSlide>

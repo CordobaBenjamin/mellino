@@ -76,6 +76,8 @@ export default function SliderImageText() {
                                     alt={slide.alt}
                                     fill
                                     className="object-cover"
+                                    loading="eager"
+                                    priority
                                 />
                             </div>
                         </SwiperSlide>

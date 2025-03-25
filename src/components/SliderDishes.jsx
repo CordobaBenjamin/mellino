@@ -77,6 +77,8 @@ export default function SliderDishes() {
                                     alt={dish.title}
                                     fill
                                     className="object-cover"
+                                    loading="eager"
+                                    priority
                                 />
                             </div>
                             <div className="p-4 flex-grow">
