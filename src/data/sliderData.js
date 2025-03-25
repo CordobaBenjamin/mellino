@@ -70,7 +70,12 @@ export const sliderImageTextData = [
     }
 ];
 
-// Información de contacto actualizada
+export const offerSliderData = [
+    { image: '/images/sliderMain (1).jpg' },
+    { image: '/images/sliderMain (2).jpg' },
+    { image: '/images/sliderMain (3).jpg' }
+];
+
 export const contactInfoData = {
     openDaysTitle: 'ABIERTO TODOS LOS DÍAS',
     openDaysSchedule: '11:30 - 16:00 hs | 19:00 - 1:00 hs.',
