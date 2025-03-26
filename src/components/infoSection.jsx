@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import React from 'react';
 import { contactInfoData } from '@/data/sliderData';
@@ -6,8 +6,7 @@ import { contactInfoData } from '@/data/sliderData';
 export default function InfoSection() {
     return (
         <section className="flex justify-center items-center py-8">
-            <div className="max-w-7xl w-full mx-auto bg-white shadow-lg rounded-lg p-8">
-
+            <div className="max-w-7xl w-full mx-auto bg-white shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1),0_10px_15px_-3px_rgba(0,0,0,0.1)] rounded-lg p-8">
                 <div className="text-center mb-6">
                     <h2 className="text-2xl md:text-3xl font-extrabold text-gray-900 uppercase tracking-wider">
                         {contactInfoData.openDaysTitle}
@@ -17,9 +16,7 @@ export default function InfoSection() {
                     </p>
                 </div>
 
-                {/* Card para datos principales */}
-                <div className="bg-gray-50 rounded-lg shadow-2xl  p-6 mb-8">
-
+                <div className="bg-gray-50 rounded-lg shadow-2xl p-6 mb-8">
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center md:text-left">
                         <div>
                             <h3 className="font-semibold text-gray-800 mb-1">Dirección Principal</h3>
@@ -39,9 +36,7 @@ export default function InfoSection() {
                     </div>
                 </div>
 
-                {/* Datos alternativos en cards individuales */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    {/* Dirección alternativa */}
                     <div className="bg-gray-50 p-6 rounded-lg shadow text-center md:text-left">
                         <h3 className="font-semibold text-gray-800 mb-2">Dirección (Alternativa)</h3>
                         <a
@@ -58,7 +53,6 @@ export default function InfoSection() {
                         </a>
                     </div>
 
-                    {/* Teléfonos alternativos */}
                     <div className="bg-gray-50 p-6 rounded-lg shadow text-center md:text-left">
                         <h3 className="font-semibold text-gray-800 mb-2">Teléfonos (Alternativos)</h3>
                         <div className="text-gray-600">
@@ -74,7 +68,6 @@ export default function InfoSection() {
                         </div>
                     </div>
 
-                    {/* Email alternativo */}
                     <div className="bg-gray-50 p-6 rounded-lg shadow-2xl text-center md:text-left">
                         <h3 className="font-semibold text-gray-800 mb-2">Email (Alternativo)</h3>
                         <a

@@ -1,4 +1,3 @@
-// src/components/SliderDishes.jsx
 'use client';
 
 import { useEffect, useState } from 'react';
@@ -92,13 +91,13 @@ export default function SliderDishes() {
 
             <div
                 ref={setNavPrevEl}
-                className="absolute left-4 top-1/2 -translate-y-1/2 z-10 cursor-pointer bg-blue-900 text-white p-2 rounded-full hover:bg-blue-800 transition"
+                className="absolute left-8 top-1/2 -translate-y-1/2 z-10 cursor-pointer bg-black text-white p-2.5 px-3 rounded-full opacity-80 hover:opacity-100 transition duration-200 shadow-lg text-xl select-none"
             >
                 &larr;
             </div>
             <div
                 ref={setNavNextEl}
-                className="absolute right-4 top-1/2 -translate-y-1/2 z-10 cursor-pointer bg-blue-900 text-white p-2 rounded-full hover:bg-blue-800 transition"
+                className="absolute right-8 top-1/2 -translate-y-1/2 z-10 cursor-pointer bg-black text-white p-2.5 px-3 rounded-full opacity-80 hover:opacity-100 transition duration-200 shadow-lg text-xl select-none"
             >
                 &rarr;
             </div>

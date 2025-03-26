@@ -97,6 +97,6 @@ export const contactInfoData = {
     socialMedia: {
         facebook: 'https://www.facebook.com/mellinopescaderia',
         instagram: 'https://www.instagram.com/mellinopescaderia',
-        whatsapp: 'https://wa.me/5491128317254'
+        whatsapp: 'https://wa.me/5491132565554'
     }
 };
