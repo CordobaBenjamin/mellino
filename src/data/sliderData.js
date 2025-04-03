@@ -1,79 +1,74 @@
 export const sliderMainData = [
-    { image: '/images/sliderMain (1).jpg' },
-    { image: '/images/sliderMain (2).jpg' },
-    { image: '/images/sliderMain (3).jpg' }
+    { image: '/images/sliderMain (1).jpeg' },
+    // { image: '/images/sliderMain (2).png' },
+    { image: '/images/sliderMain (3).jpeg' }
 ];
 
 export const sliderDishesData = [
     {
         title: 'Plato 2',
-        image: '/images/Dishes (2).jpg',
+        image: '/images/Dishes (2).png',
         description: 'Descripción del plato 2.'
     },
     {
         title: 'Plato 3',
-        image: '/images/Dishes (3).jpg',
+        image: '/images/Dishes (3).png',
         description: 'Descripción del plato 3.'
     },
     {
         title: 'Plato 4',
-        image: '/images/Dishes (4).jpg',
+        image: '/images/Dishes (4).png',
         description: 'Descripción del plato 4.'
     },
-    {
-        title: 'Plato 5',
-        image: '/images/Dishes (5).jpg',
-        description: 'Descripción del plato 5.'
-    },
-    {
-        title: 'Plato 6',
-        image: '/images/Dishes (6).jpg',
-        description: 'Descripción del plato 6.'
-    },
-    {
-        title: 'Plato 7',
-        image: '/images/Dishes (7).jpg',
-        description: 'Descripción del plato 7.'
-    },
-    {
-        title: 'Plato 8',
-        image: '/images/Dishes (8).jpg',
-        description: 'Descripción del plato 8.'
-    },
-    {
-        title: 'Plato 9',
-        image: '/images/Dishes (9).jpg',
-        description: 'Descripción del plato 9.'
-    },
-    {
-        title: 'Plato 10',
-        image: '/images/Dishes (10).jpg',
-        description: 'Descripción del plato 10.'
-    }
+    // {
+    //     title: 'Plato 5',
+    //     image: '/images/Dishes (5).jpg',
+    //     description: 'Descripción del plato 5.'
+    // },
+    // {
+    //     title: 'Plato 6',
+    //     image: '/images/Dishes (6).jpg',
+    //     description: 'Descripción del plato 6.'
+    // },
+    // {
+    //     title: 'Plato 7',
+    //     image: '/images/Dishes (7).jpg',
+    //     description: 'Descripción del plato 7.'
+    // },
+    // {
+    //     title: 'Plato 8',
+    //     image: '/images/Dishes (8).jpg',
+    //     description: 'Descripción del plato 8.'
+    // },
+    // {
+    //     title: 'Plato 9',
+    //     image: '/images/Dishes (9).jpg',
+    //     description: 'Descripción del plato 9.'
+    // },
+    // {
+    //     title: 'Plato 10',
+    //     image: '/images/Dishes (10).jpg',
+    //     description: 'Descripción del plato 10.'
+    // }
 ];
 
 export const sliderImageTextData = [
     {
-        image: '/images/Dishes (8).jpg',
+        image: '/images/Dishes (5).png',
         alt: 'Imagen 1',
         text: 'Texto de la imagen 1'
     },
     {
-        image: '/images/Dishes (9).jpg',
+        image: '/images/Dishes (6).png',
         alt: 'Imagen 2',
         text: 'Texto de la imagen 2'
     },
-    {
-        image: '/images/Dishes (10).jpg',
-        alt: 'Imagen 3',
-        text: 'Texto de la imagen 3'
-    }
 ];
 
 export const offerSliderData = [
-    { image: '/images/sliderMain (1).jpg' },
-    { image: '/images/sliderMain (2).jpg' },
-    { image: '/images/sliderMain (3).jpg' }
+    { image: '/images/sliderMain (1).jpeg' },
+    // { image: '/images/sliderMain (2).jpg' },
+    // { image: '/images/sliderMain (3).jpg' }
 ];
 
 export const contactInfoData = {

@@ -66,16 +66,16 @@ export default function SliderImageText() {
                     loop
                     autoplay={{ delay: 4000, disableOnInteraction: false }}
                     modules={[Autoplay]}
-                    className="h-64"
+                    className="h-64 xl:h-80"
                 >
                     {sliderImageTextData.map((slide, index) => (
                         <SwiperSlide key={index}>
-                            <div className="relative w-full h-64 rounded-lg overflow-hidden shadow">
+                            <div className="w-full h-64 rounded-lg overflow-hidden shadow">
                                 <Image
                                     src={slide.image}
                                     alt={slide.alt}
                                     fill
-                                    className="object-cover"
+                                    className=""
                                     loading="eager"
                                     priority
                                 />
