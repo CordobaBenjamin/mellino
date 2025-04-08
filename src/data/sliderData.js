@@ -1,7 +1,7 @@
 export const sliderMainData = [
-    { image: '/images/sliderMain (1).jpeg' },
-    // { image: '/images/sliderMain (2).png' },
-    { image: '/images/sliderMain (3).jpeg' }
+    // { image: '/images/test1.jpg' },
+    { image: '/images/test2.jpeg' },
+    // { image: '/images/sliderMain (3).jpeg' }
 ];
 
 export const sliderDishesData = [
