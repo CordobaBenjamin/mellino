@@ -62,12 +62,11 @@ export default function OfferPopup() {
                         >
                             {offerSliderData.map((item, index) => (
                                 <SwiperSlide key={index}>
-                                    <div className="relative w-full h-full">
+                                    <div className="relative w-full" style={{ paddingTop: "50%" }}>
                                         <Image
                                             src={item.image}
                                             alt={`Oferta ${index + 1}`}
                                             fill
-                                            className="object-cover"
                                         />
                                     </div>
                                 </SwiperSlide>

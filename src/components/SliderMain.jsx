@@ -10,8 +10,10 @@ import { sliderMainData } from '@/data/sliderData';
 
 function LoadingSpinner() {
     return (
-        <div className="flex items-center justify-center h-64">
-            <div className="animate-spin rounded-full h-10 w-10 border-t-2 border-b-2 border-blue-900"></div>
+        <div className="relative w-full" style={{ paddingTop: '56.25%' }}>
+            <div className="absolute inset-0 flex items-center justify-center">
+                <div className="animate-spin rounded-full h-10 w-10 border-t-2 border-b-2 border-blue-900"></div>
+            </div>
         </div>
     );
 }
@@ -30,7 +32,7 @@ export default function SliderMain() {
             }, 200);
             return () => clearTimeout(timer);
         } catch (err) {
-            setError(err.message);
+            setError(err instanceof Error ? err.message : 'Ocurrió un error inesperado');
             setIsLoading(false);
         }
     }, []);
@@ -53,27 +55,31 @@ export default function SliderMain() {
 
     return (
         <div className="max-w-7xl mx-auto w-full overflow-hidden relative">
-            <Swiper
-                loop
-                autoplay={{ delay: 3000, disableOnInteraction: false }}
-                modules={[Autoplay]}
-                className="w-full h-64 md:h-96 rounded-lg shadow"
-            >
-                {sliderMainData.map((item, index) => (
-                    <SwiperSlide key={index}>
-                        <div className="relative w-full h-full">
-                            <Image
-                                src={item.image}
-                                alt={`Slider image ${index + 1}`}
-                                fill
-                                className="object-cover"
-                                loading="eager"
-                                priority
-                            />
-                        </div>
-                    </SwiperSlide>
-                ))}
-            </Swiper>
+            <div className="relative w-full" style={{ paddingTop: '50%' }} >
+
+                <div className="absolute inset-0">
+                    <Swiper
+                        loop
+                        autoplay={{ delay: 3000, disableOnInteraction: false }}
+                        modules={[Autoplay]}
+                        className="w-full h-full"
+                    >
+                        {sliderMainData.map((item, index) => (
+                            <SwiperSlide key={index}>
+                                <div className="relative w-full h-full">
+                                    <Image
+                                        src={item.image}
+                                        alt={`Slider image ${index + 1}`}
+                                        fill
+                                        loading="eager"
+                                        priority
+                                    />
+                                </div>
+                            </SwiperSlide>
+                        ))}
+                    </Swiper>
+                </div>
+            </div>
         </div>
     );
 }

@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import { useEffect, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -70,7 +70,7 @@ export default function SliderDishes() {
                 {sliderDishesData.map((dish, index) => (
                     <SwiperSlide key={index}>
                         <div className="bg-white shadow rounded-lg overflow-hidden h-full flex flex-col">
-                            <div className="relative w-full h-48">
+                            <div className="relative w-full aspect-video">
                                 <Image
                                     src={dish.image}
                                     alt={dish.title}

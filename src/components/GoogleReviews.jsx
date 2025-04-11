@@ -1,51 +1,81 @@
-// src/components/GoogleReviews.jsx
 "use client";
-
+import { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import { FaStar } from "react-icons/fa";
 
-const reviews = [
+const staticReviews = [
     {
         name: "Juan Pérez",
-        profilePic: "/images/user1.jpg",
+        profile_photo_url: "/images/user1.jpg",
         rating: 5,
-        date: "hace 2 semanas",
-        comment: "Excelente calidad y atención. ¡Muy recomendable!",
+        relative_time_description: "hace 2 semanas",
+        text: "Excelente calidad y atención. ¡Muy recomendable!",
     },
     {
         name: "María Gómez",
-        profilePic: "/images/user2.jpg",
+        profile_photo_url: "/images/user2.jpg",
         rating: 4,
-        date: "hace 1 mes",
-        comment: "Los pescados siempre frescos y el servicio rápido.",
+        relative_time_description: "hace 1 mes",
+        text: "Los pescados siempre frescos y el servicio rápido.",
     },
     {
         name: "Carlos Rodríguez",
-        profilePic: "/images/user3.jpg",
+        profile_photo_url: "/images/user3.jpg",
         rating: 5,
-        date: "hace 3 meses",
-        comment: "Sin dudas la mejor pescadería de Buenos Aires.",
+        relative_time_description: "hace 3 meses",
+        text: "Sin dudas la mejor pescadería de Buenos Aires.",
     },
     {
         name: "Ana Torres",
-        profilePic: "/images/user4.jpg",
+        profile_photo_url: "/images/user4.jpg",
         rating: 5,
-        date: "hace 1 semana",
-        comment: "Me encantó la calidad y frescura de los productos.",
+        relative_time_description: "hace 1 semana",
+        text: "Me encantó la calidad y frescura de los productos.",
     },
     {
         name: "Luis Fernández",
-        profilePic: "/images/user5.jpg",
+        profile_photo_url: "/images/user5.jpg",
         rating: 4,
-        date: "hace 2 meses",
-        comment: "Buen servicio y variedad de productos del mar.",
+        relative_time_description: "hace 2 meses",
+        text: "Buen servicio y variedad de productos del mar.",
     },
 ];
 
 export default function GoogleReviews() {
+    const [reviews, setReviews] = useState([]);
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        fetch("/api/google-reviews")
+            .then((res) => {
+                if (!res.ok) {
+                    throw new Error("Error al obtener las reseñas");
+                }
+                return res.json();
+            })
+            .then((data) => {
+                if (data && data.length > 0) setReviews(data);
+                else setReviews(staticReviews);
+                setLoading(false);
+            })
+            .catch((err) => {
+                console.error("Fallo al obtener reseñas reales, se usará datos estáticos.", err);
+                setReviews(staticReviews);
+                setLoading(false);
+            });
+    }, []);
+
+    if (loading) {
+        return (
+            <section className="py-12 bg-blue-50">
+                <div className="max-w-6xl mx-auto text-center">Cargando reseñas...</div>
+            </section>
+        );
+    }
+
     return (
         <section className="py-12 bg-blue-50">
             <Swiper
@@ -66,13 +96,13 @@ export default function GoogleReviews() {
                         <div className="bg-white p-6 rounded-lg shadow-lg border border-gray-200 text-left">
                             <div className="flex items-center gap-4">
                                 <img
-                                    src={review.profilePic}
+                                    src={review.profile_photo_url}
                                     alt={review.name}
                                     className="w-12 h-12 rounded-full object-cover"
                                 />
                                 <div>
                                     <p className="font-semibold text-blue-900">{review.name}</p>
-                                    <p className="text-gray-500 text-sm">{review.date}</p>
+                                    <p className="text-gray-500 text-sm">{review.relative_time_description}</p>
                                 </div>
                             </div>
                             <div className="flex mt-2 text-yellow-500">
@@ -80,7 +110,7 @@ export default function GoogleReviews() {
                                     <FaStar key={i} />
                                 ))}
                             </div>
-                            <p className="mt-3 text-blue-800 text-sm">{review.comment}</p>
+                            <p className="mt-3 text-blue-800 text-sm">{review.text}</p>
                         </div>
                     </SwiperSlide>
                 ))}

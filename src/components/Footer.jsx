@@ -1,7 +1,7 @@
 // src/components/Footer.jsx
 "use client";
 
-import { contactInfoData } from "../data/sliderData";
+import {branchAddresses, contactInfoData} from "../data/sliderData";
 import {
   FaMapMarkerAlt,
   FaPhone,
@@ -21,14 +21,14 @@ export default function Footer() {
           <p className="text-sm mb-4">{contactInfoData.openDaysSchedule}</p>
           <h3 className="text-xl font-bold mb-1">Dirección</h3>
           <a
-            href={contactInfoData.address.mapLink}
+            href={branchAddresses.mapLink}
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center justify-center md:justify-start gap-2 text-sm text-gray-200 hover:text-white"
           >
             <FaMapMarkerAlt />
-            {contactInfoData.address.line1} {contactInfoData.address.line2}
-            {contactInfoData.address.line3}
+            {branchAddresses.line1} {branchAddresses.line2}
+            {branchAddresses.line3}
           </a>
         </div>
 
