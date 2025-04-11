@@ -73,13 +73,14 @@ export default function SliderImageText() {
           >
             {sliderImageTextData.map((slide, index) => (
                 <SwiperSlide key={index}>
-                  <div className="relative w-full aspect-video rounded-lg overflow-hidden shadow">
+                  <div className="w-full aspect-video rounded-lg overflow-hidden shadow">
                     <Image
                         src={slide.image}
                         alt={slide.alt}
                         fill
                         loading="eager"
                         priority
+                        style={{objectFit: "cover"}}
                     />
                   </div>
                 </SwiperSlide>

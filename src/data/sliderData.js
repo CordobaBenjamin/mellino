@@ -1,61 +1,96 @@
 export const sliderMainData = [
-  { image: "/images/sliderMain (1).jpeg" },
-  { image: "/images/sliderMain (2).jpeg" },
-  { image: "/images/sliderMain (3).jpeg" },
-  { image: "/images/sliderMain (4).jpeg" },
-  { image: "/images/sliderMain (5).jpeg" },
-  { image: "/images/sliderMain (6).jpeg" },
+  { image: "/images/banner/sliderMain (1).jpeg" },
+  { image: "/images/banner/sliderMain (2).jpeg" },
+  { image: "/images/banner/sliderMain (3).jpeg" },
+  { image: "/images/banner/sliderMain (4).jpeg" },
+  { image: "/images/banner/sliderMain (5).jpeg" },
+  { image: "/images/banner/sliderMain (6).jpeg" },
 ];
 
 export const sliderDishesData = [
   {
     title: "Plato 1",
-    image: "/images/Dishes (2).png",
-    description: "Descripción del plato 2.",
+    image: "/images/dishes/Dishes (1).jpg",
+    description: "Descripción del plato 1.",
   },
   {
     title: "Plato 2",
-    image: "/images/Dishes (3).png",
-    description: "Descripción del plato 3.",
-  },
-  {
-    title: "Plato 3",
-    image: "/images/Dishes (4).png",
-    description: "Descripción del plato 4.",
-  },
-  {
-    title: "Plato 4",
-    image: "/images/Dishes (2).png",
+    image: "/images/dishes/Dishes (1).png",
     description: "Descripción del plato 2.",
   },
   {
-    title: "Plato 5",
-    image: "/images/Dishes (3).png",
+    title: "Plato 3",
+    image: "/images/dishes/Dishes (2).JPG",
     description: "Descripción del plato 3.",
   },
   {
-    title: "Plato 6",
-    image: "/images/Dishes (4).png",
+    title: "Plato 4",
+    image: "/images/dishes/Dishes (2).png",
     description: "Descripción del plato 4.",
+  },
+  {
+    title: "Plato 5",
+    image: "/images/dishes/Dishes (3).jpg",
+    description: "Descripción del plato 5.",
+  },
+  {
+    title: "Plato 6",
+    image: "/images/dishes/Dishes (3).png",
+    description: "Descripción del plato 6.",
+  },
+  {
+    title: "Plato 7",
+    image: "/images/dishes/Dishes (4).jpg",
+    description: "Descripción del plato 7.",
+  },
+  {
+    title: "Plato 8",
+    image: "/images/dishes/Dishes (6).JPG",
+    description: "Descripción del plato 8.",
+  },
+  {
+    title: "Plato 9",
+    image: "/images/dishes/Dishes (8).JPG",
+    description: "Descripción del plato 9.",
   },
 ];
 
 export const sliderImageTextData = [
   {
-    image: "/images/Dishes (5).png",
+    image: "/images/other/other (1).jpg",
     alt: "Imagen 1",
     text: "Texto de la imagen 1",
   },
   {
-    image: "/images/Dishes (6).png",
+    image: "/images/other/other (1).png",
     alt: "Imagen 2",
     text: "Texto de la imagen 2",
+  },
+  {
+    image: "/images/other/other (2).jpg",
+    alt: "Imagen 3",
+    text: "Texto de la imagen 3",
+  },
+  {
+    image: "/images/other/other (3).jpg",
+    alt: "Imagen 4",
+    text: "Texto de la imagen 4",
+  },
+  {
+    image: "/images/other/other (3).png",
+    alt: "Imagen 5",
+    text: "Texto de la imagen 5",
+  },
+  {
+    image: "/images/other/other (5).jpg",
+    alt: "Imagen 6",
+    text: "Texto de la imagen 6",
   },
 ];
 
 export const offerSliderData = [
-  { image: "/images/sliderMain (3).jpeg" },
-  { image: "/images/sliderMain (4).jpeg" },
+  { image: "/images/banner/sliderMain (3).jpeg" },
+  { image: "/images/banner/sliderMain (4).jpeg" },
 ];
 
 export const contactInfoData = {

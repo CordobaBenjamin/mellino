@@ -57,10 +57,10 @@ export default function SliderMain() {
         <div className="max-w-7xl mx-auto w-full overflow-hidden relative">
             <div className="relative w-full" style={{ paddingTop: '50%' }} >
 
-                <div className="absolute inset-0">
+                <div className="absolute inset-0 border-blue-200 border-4 rounded-xl shadow-blue-200 shadow-lg">
                     <Swiper
                         loop
-                        autoplay={{ delay: 3000, disableOnInteraction: false }}
+                        autoplay={{ delay: 5000, disableOnInteraction: false }}
                         modules={[Autoplay]}
                         className="w-full h-full"
                     >

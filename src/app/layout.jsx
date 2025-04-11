@@ -41,6 +41,7 @@ export default function RootLayout({ children }) {
             <meta name="author" content="Mellino Pescadería"/>
             <link rel="canonical" href="https://mellinopescaderia.com.ar"/>
             <link rel="icon" href="/favicon.ico"/>
+            <title>La cocina de Ana Mellino</title>
         </head>
         <body>{children}</body>
         </html>
