@@ -18,7 +18,7 @@ export default function InfoSection() {
           <div
               onClick={() => setSelectedBranch(branchAddresses[0])}
               className={`cursor-pointer bg-gray-50 rounded-lg shadow-2xl p-6 mb-8 ${
-                  selectedBranch.mapLink === branchAddresses[0].mapLink ? "border-4 border-blue-800" : ""
+                  selectedBranch.mapLink === branchAddresses[0].mapLink ? "bg-gradient-to-b from-blue-100 to-blue-50" : ""
               }`}
           >
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center md:text-left">
@@ -47,7 +47,7 @@ export default function InfoSection() {
                     key={index}
                     onClick={() => setSelectedBranch(branchAddresses)}
                     className={`cursor-pointer bg-gray-50 p-6 rounded-lg shadow text-center md:text-left ${
-                        selectedBranch.mapLink === branchAddresses.mapLink ? "border-4 border-blue-800" : ""
+                        selectedBranch.mapLink === branchAddresses.mapLink ? "bg-gradient-to-b from-blue-100 to-blue-50" : ""
                     }`}
                 >
                   <h3 className="font-semibold text-gray-800 mb-2">
