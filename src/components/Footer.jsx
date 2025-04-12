@@ -19,17 +19,6 @@ export default function Footer() {
             {contactInfoData.openDaysTitle}
           </h3>
           <p className="text-sm mb-4">{contactInfoData.openDaysSchedule}</p>
-          <h3 className="text-xl font-bold mb-1">Dirección</h3>
-          <a
-            href={branchAddresses.mapLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center justify-center md:justify-start gap-2 text-sm text-gray-200 hover:text-white"
-          >
-            <FaMapMarkerAlt />
-            {branchAddresses.line1} {branchAddresses.line2}
-            {branchAddresses.line3}
-          </a>
         </div>
 
         <div>
@@ -47,24 +36,10 @@ export default function Footer() {
         </div>
 
         <div>
-          <h3 className="text-xl font-bold mb-2">Contacto</h3>
-          <a
-            href={contactInfoData.email.link}
-            className="flex items-center justify-center md:justify-start gap-2 text-sm text-gray-200 hover:text-white"
-          >
-            <FaEnvelope />
-            {contactInfoData.email.display}
-          </a>
-          <h3 className="text-xl font-bold mt-6 mb-2">Síguenos</h3>
+          <h3 className="text-xl font-bold mb-2">Síguenos</h3>
           <div className="flex justify-center md:justify-start gap-4">
             <a
-              href="#"
-              className="text-gray-200 hover:text-white text-2xl transition duration-200"
-            >
-              <FaFacebook />
-            </a>
-            <a
-              href="#"
+                href={contactInfoData.socialMedia.instagram}
               className="text-gray-200 hover:text-white text-2xl transition duration-200"
             >
               <FaInstagram />

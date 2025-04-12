@@ -23,18 +23,20 @@ export default function InfoSection() {
           >
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center md:text-left">
               <div>
-                <h3 className="font-semibold text-gray-800 mb-1">Dirección Principal</h3>
-                <p className="text-gray-600">
+                <h3 className="text-xl font-semibold text-gray-800 mb-1">Dirección Principal</h3>
+                <p className="text-l text-gray-600">
                   {branchAddresses[0].line1} {branchAddresses[0].line2} {branchAddresses[0].line3}
                 </p>
               </div>
               <div>
-                <h3 className="font-semibold text-gray-800 mb-1">Teléfono Principal</h3>
-                <p className="text-gray-600">{contactInfoData.phones[0]?.display}</p>
+                <h3 className="text-xl font-semibold text-gray-800 mb-1">Teléfono Principal</h3>
+                <p className="text-l text-gray-600">{contactInfoData.phones[0]?.display}</p>
               </div>
               <div>
-                <h3 className="font-semibold text-gray-800 mb-1">Email Principal</h3>
-                <p className="text-gray-600">{contactInfoData.email.display}</p>
+                <h3 className="text-xl font-semibold text-gray-800 mb-1">Instagram</h3>
+                <a href={contactInfoData.socialMedia.instagram} target={"_blank"}>
+                  <p className="text-l text-gray-600"> La Cocina De Ana Mellino </p>
+                </a>
               </div>
             </div>
           </div>
@@ -50,8 +52,8 @@ export default function InfoSection() {
                         selectedBranch.mapLink === branchAddresses.mapLink ? "bg-gradient-to-b from-blue-100 to-blue-50" : ""
                     }`}
                 >
-                  <h3 className="font-semibold text-gray-800 mb-2">
-                    Mas Sucursales
+                  <h3 className="font-semibold text-xl text-gray-800 mb-2">
+                    {branchAddresses.sucursal}
                   </h3>
                   <a
                       href={branchAddresses.mapLink}
@@ -63,8 +65,15 @@ export default function InfoSection() {
                     <br />
                     {branchAddresses.line2}
                     <br />
-                    {branchAddresses.line3}
+
+                    <h2> Horarios:   {branchAddresses.horario} </h2>
+
+                    <h2> Telefono:    {branchAddresses.telefono} </h2>
+
+
+
                   </a>
+
                 </div>
             ))}
           </div>

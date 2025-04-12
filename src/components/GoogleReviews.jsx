@@ -115,8 +115,8 @@ export default function GoogleReviews() {
                                         className="w-12 h-12 rounded-full object-cover"
                                     />
                                     <div>
-                                        <p className="font-semibold text-blue-900">{review.name}</p>
-                                        <p className="text-gray-500 text-sm">{review.relative_time_description}</p>
+                                        <p className="text-xl font-semibold text-blue-900">{review.name}</p>
+                                        <p className="text-l text-gray-500 text-sm">{review.relative_time_description}</p>
                                     </div>
                                 </div>
                                 <div className="flex mt-2 text-yellow-500">
@@ -124,8 +124,8 @@ export default function GoogleReviews() {
                                         <FaStar key={i} />
                                     ))}
                                 </div>
-                                <p className="mt-3 text-blue-800 text-sm whitespace-pre-line">
-                                    {truncateText(review.text, 100)}
+                                <p className="mt-3 text-blue-800 text-l min-h-32 whitespace-pre-line">
+                                    {truncateText(review.text, 150)}
                                 </p>
                             </div>
                         </div>

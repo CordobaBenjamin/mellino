@@ -14,10 +14,14 @@ import DiscountWheel from "@/components/DiscountWheel";
 import OfferPopup from "@/components/offerPopup";
 import DiscountPopup from "@/components/offerPopup";
 import DiscountWheelPopup from "@/components/DiscountWheel";
+import Image from "next/image";
 
 export default function Home() {
+
   return (
+
     <main className="min-h-screen bg-blue-50">
+
       {/*<DiscountWheelPopup />*/}
       <OfferPopup />
 
@@ -25,17 +29,21 @@ export default function Home() {
         <WhatsAppButton />
       </section>
 
-      <header
-        className="text-center py-12 md:py-16 bg-gradient-to-b from-blue-200 to-blue-50 text-blue-900"
-        style={{ fontFamily: '"Merriweather", serif' }}
-      >
-        <h1 className="text-4xl sm:text-5xl md:text-7xl tracking-wider">
-          La Cocina de Ana Mellino
-        </h1>
-        <p className="mt-4 sm:mt-6 text-base sm:text-xl md:text-2xl">
-          Sucursal - Lope de Vega
-        </p>
-      </header>
+        <header
+            className="text-center py-12 md:py-16 bg-gradient-to-b from-white to-blue-50 text-blue-900 uppercase animate-fade-in"
+            style={{ fontFamily: '"Merriweather", serif' }}
+        >
+            <h1 className="titulo text-4xl sm:text-5xl md:text-9xl tracking-wide drop-shadow-sm">
+                La Cocina de Ana Mellino
+            </h1>
+            <p className=" mt-4 sm:mt-6 text-lg sm:text-xl md:text-2xl text-blue-800">
+                Sucursal – Lope de Vega
+            </p>
+            <p className=" mt-2 text-lg sm:text-xl md:text-2xl text-blue-800 italic">
+                “Tradición y sabor en cada plato desde 1995”
+            </p>
+        </header>
+
 
       <section className="pb-12 bg-gradient-to-b from-blue-50 to-white">
         <div className="max-w-7xl mx-auto">

@@ -69,22 +69,26 @@ export default function SliderDishes() {
             >
                 {sliderDishesData.map((dish, index) => (
                     <SwiperSlide key={index}>
-                        <div className="bg-white shadow rounded-lg overflow-hidden h-full flex flex-col">
-                            <div className="relative w-full aspect-video">
-                                <Image
-                                    src={dish.image}
-                                    alt={dish.title}
-                                    fill
-                                    className="object-cover"
-                                    loading="eager"
-                                    priority
-                                />
+
+                        <div className="h-full flex">
+                            <div className="bg-white shadow rounded-lg overflow-hidden flex flex-col  h-full w-full">
+                                <div className="relative w-full aspect-video">
+                                    <Image
+                                        src={dish.image}
+                                        alt={dish.title}
+                                        fill
+                                        className="object-cover"
+                                        loading="eager"
+                                        priority
+                                    />
+                                </div>
+                                <div className="p-4 flex-grow whitespace-pre-wrap min-h-32" >
+                                    <h3 className="text-2xl font-semibold text-blue-900">{dish.title}</h3>
+                                    <p className="text-xl text-blue-700">{dish.description}</p>
+                                </div>
                             </div>
-                            <div className="p-4 flex-grow">
-                                <h3 className="font-semibold text-blue-900">{dish.title}</h3>
-                                <p className="text-sm text-blue-700">{dish.description}</p>
                             </div>
-                        </div>
+
                     </SwiperSlide>
                 ))}
             </Swiper>

@@ -55,7 +55,7 @@ export default function SliderImageText() {
   return (
       <div className="max-w-7xl mx-auto px-4 flex flex-col md:flex-row gap-8">
         <div className="md:w-1/2 flex items-center justify-center bg-blue-100 shadow-lg p-6 rounded-lg">
-          <p className="text-lg text-blue-900 font-semibold leading-relaxed">
+          <p className="text-2xl text-blue-900 font-semibold leading-relaxed">
             Nuestra calidad y frescura han llamado la atención de los medios. Aquí te
             compartimos algunos momentos en los que nuestra pescadería se destaca en
             televisión.
