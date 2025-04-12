@@ -1,7 +1,7 @@
 // src/components/Footer.jsx
 "use client";
 
-import {branchAddresses, contactInfoData} from "../data/sliderData";
+import { branchAddresses, contactInfoData } from "../data/sliderData";
 import {
   FaMapMarkerAlt,
   FaPhone,
@@ -39,10 +39,11 @@ export default function Footer() {
           <h3 className="text-xl font-bold mb-2">Síguenos</h3>
           <div className="flex justify-center md:justify-start gap-4">
             <a
-                href={contactInfoData.socialMedia.instagram}
-              className="text-gray-200 hover:text-white text-2xl transition duration-200"
+              href={contactInfoData.socialMedia.instagram}
+              className="text-gray-200 hover:text-white text-2xl transition duration-200 flex"
             >
               <FaInstagram />
+              <p className="text-sm  ml-2"> La Cocina De Ana Mellino </p>
             </a>
           </div>
         </div>
