@@ -5,6 +5,16 @@
     --font-mono: var(--font-geist-mono);
 }
 
+* {
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.titulo {
+    font-weight: 200!important;
+}
+
 :root {
     --background: #ffffff;
     --foreground: #171717;
@@ -21,4 +31,19 @@ body {
     color: var(--foreground);
     background: var(--background);
     font-family: Arial, Helvetica, sans-serif;
+}
+
+@keyframes fadeInSlide {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-in {
+    animation: fadeInSlide 1s ease-out both;
 }

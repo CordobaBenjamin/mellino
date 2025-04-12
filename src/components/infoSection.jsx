@@ -1,9 +1,10 @@
 "use client";
-
-import React from "react";
-import { contactInfoData } from "@/data/sliderData";
+import React, { useState } from "react";
+import { contactInfoData, branchAddresses } from "@/data/sliderData";
 
 export default function InfoSection() {
+  const [selectedBranch, setSelectedBranch] = useState(branchAddresses[0]);
+
   return (
     <section className="flex justify-center items-center py-8">
       <div className="max-w-7xl w-full mx-auto bg-white shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1),0_10px_15px_-3px_rgba(0,0,0,0.1)] rounded-lg p-8">
@@ -16,82 +17,89 @@ export default function InfoSection() {
           </p>
         </div>
 
-        <div className="bg-gray-50 rounded-lg shadow-2xl p-6 mb-8">
+        <div
+          onClick={() => setSelectedBranch(branchAddresses[0])}
+          className={`cursor-pointer bg-gray-50 rounded-lg shadow-2xl p-6 mb-8 ${
+            selectedBranch.mapLink === branchAddresses[0].mapLink
+              ? "bg-gradient-to-b from-blue-100 to-blue-50"
+              : ""
+          }`}
+        >
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center md:text-left">
             <div>
-              <h3 className="font-semibold text-gray-800 mb-1">
+              <h3 className="text-xl font-semibold text-gray-800 mb-1">
                 Dirección Principal
               </h3>
-              <p className="text-gray-600">
-                {contactInfoData.address.line1}, {contactInfoData.address.line2}
-                , {contactInfoData.address.line3}
+              <p className="text-l text-gray-600">
+                {branchAddresses[0].line1} {branchAddresses[0].line2}{" "}
+                {branchAddresses[0].line3}
               </p>
             </div>
             <div>
-              <h3 className="font-semibold text-gray-800 mb-1">
+              <h3 className="text-xl font-semibold text-gray-800 mb-1">
                 Teléfono Principal
               </h3>
-              <p className="text-gray-600">
+              <p className="text-l text-gray-600">
                 {contactInfoData.phones[0]?.display}
               </p>
             </div>
             <div>
-              <h3 className="font-semibold text-gray-800 mb-1">
-                Email Principal
+              <h3 className="text-xl font-semibold text-gray-800 mb-1">
+                Instagram
               </h3>
-              <p className="text-gray-600">{contactInfoData.email.display}</p>
+              <a href={contactInfoData.socialMedia.instagram} target={"_blank"}>
+                <p className="text-l text-gray-600">
+                  {" "}
+                  La Cocina De Ana Mellino{" "}
+                </p>
+              </a>
             </div>
           </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div className="bg-gray-50 p-6 rounded-lg shadow text-center md:text-left">
-            <h3 className="font-semibold text-gray-800 mb-2">
-              Dirección (Alternativa)
-            </h3>
-            <a
-              href={contactInfoData.address.mapLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-600 hover:text-gray-800 hover:underline"
+          {branchAddresses.slice(1).map((branchAddresses, index) => (
+            <div
+              key={index}
+              onClick={() => setSelectedBranch(branchAddresses)}
+              className={`cursor-pointer bg-gray-50 p-6 rounded-lg shadow text-center md:text-left ${
+                selectedBranch.mapLink === branchAddresses.mapLink
+                  ? "bg-gradient-to-b from-blue-100 to-blue-50"
+                  : ""
+              }`}
             >
-              {contactInfoData.address.line1}
-              <br />
-              {contactInfoData.address.line2}
-              <br />
-              {contactInfoData.address.line3}
-            </a>
-          </div>
+              <h3 className="font-semibold text-xl text-gray-800 mb-2">
+                {branchAddresses.sucursal}
+              </h3>
+              <a
+                href={branchAddresses.mapLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-600 hover:text-gray-800 hover:underline"
+              >
+                {branchAddresses.line1}
+                <br />
+                {branchAddresses.line2}
+                <br />
 
-          <div className="bg-gray-50 p-6 rounded-lg shadow text-center md:text-left">
-            <h3 className="font-semibold text-gray-800 mb-2">
-              Teléfonos (Alternativos)
-            </h3>
-            <div className="text-gray-600">
-              {contactInfoData.phones.map((phone, index) => (
-                <a
-                  key={index}
-                  href={phone.link}
-                  className="block hover:text-gray-800 hover:underline"
-                >
-                  {phone.display}
-                </a>
-              ))}
+                <h2> Horarios: {branchAddresses.horario} </h2>
+
+                <h2> Telefono: {branchAddresses.telefono} </h2>
+              </a>
             </div>
-          </div>
-
-          <div className="bg-gray-50 p-6 rounded-lg shadow-2xl text-center md:text-left">
-            <h3 className="font-semibold text-gray-800 mb-2">
-              Email (Alternativo)
-            </h3>
-            <a
-              href={contactInfoData.email.link}
-              className="text-gray-600 hover:text-gray-800 hover:underline"
-            >
-              {contactInfoData.email.display}
-            </a>
-          </div>
+          ))}
         </div>
+
+        <iframe
+          src={selectedBranch.mapLink}
+          width="100%"
+          height="450"
+          style={{ border: 0, marginTop: "40px" }}
+          allowFullScreen
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+          className="rounded-lg shadow"
+        ></iframe>
       </div>
     </section>
   );
