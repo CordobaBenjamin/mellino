@@ -9,49 +9,49 @@ export const sliderMainData = [
 
 export const sliderDishesData = [
   {
-    title: "Plato 1",
+    title: "Merluza con crema",
     image: "/images/dishes/Dishes (1).jpg",
-    description: "Descripción del plato 1.",
+    description: "Contiene crema de hierbas y frutos secos",
   },
   {
-    title: "Plato 2",
+    title: "Salmon y Langostino grille",
     image: "/images/dishes/Dishes (1).png",
-    description: "Descripción del plato 2.",
+    description: "Laqueado con salsa de ostras y pure.",
   },
   {
-    title: "Plato 3",
+    title: "Nuestras Empanadas",
     image: "/images/dishes/Dishes (2).JPG",
-    description: "Descripción del plato 3.",
+    description: "Empanadas de merluza y vegetales, salmon rosado y queso azul",
   },
   {
-    title: "Plato 4",
+    title: "Picada Fritos de Mar",
     image: "/images/dishes/Dishes (2).png",
-    description: "Descripción del plato 4.",
+    description: "Bastones de merluza, bocados de Brotola",
   },
   {
-    title: "Plato 5",
+    title: "Rabas Fritas",
     image: "/images/dishes/Dishes (3).jpg",
-    description: "Descripción del plato 5.",
+    description: "Delicia marina en cada mordida.",
   },
   {
-    title: "Plato 6",
+    title: "Filter de Salmon Fresco",
     image: "/images/dishes/Dishes (3).png",
-    description: "Descripción del plato 6.",
+    description: "Proveniente de Chile.",
   },
   {
-    title: "Plato 7",
+    title: "Salad Crocante de Merluza y Calamar Alioli",
     image: "/images/dishes/Dishes (4).jpg",
-    description: "Descripción del plato 7.",
+    description: "Integrada con Hojas verdes, repollo, zanahoria y cherrrys.",
   },
   {
-    title: "Plato 8",
+    title: "Nuestra Paella especial de Mariscos",
     image: "/images/dishes/Dishes (6).JPG",
-    description: "Descripción del plato 8.",
+    description: "Nuestra paella es una delicia Mediterránea",
   },
   {
-    title: "Plato 9",
+    title: "Roll de Merluza y Atun",
     image: "/images/dishes/Dishes (8).JPG",
-    description: "Descripción del plato 9.",
+    description: "Marinado con salsa, lima, mostaza y gotas de Siracha.",
   },
 ];
 
@@ -67,30 +67,56 @@ export const sliderImageTextData = [
     text: "Texto de la imagen 2",
   },
   {
-    image: "/images/other/other (2).jpg",
+    image: "/images/other/other (8).jpg",
     alt: "Imagen 3",
     text: "Texto de la imagen 3",
   },
   {
-    image: "/images/other/other (3).jpg",
+    image: "/images/other/other (9).jpg",
     alt: "Imagen 4",
     text: "Texto de la imagen 4",
   },
   {
-    image: "/images/other/other (3).png",
+    image: "/images/other/other (2).jpg",
     alt: "Imagen 5",
     text: "Texto de la imagen 5",
   },
   {
-    image: "/images/other/other (5).jpg",
+    image: "/images/other/other (2).png",
     alt: "Imagen 6",
+    text: "Texto de la imagen 6",
+  },
+  {
+    image: "/images/other/other (10).jpg",
+    alt: "Imagen 7",
+    text: "Texto de la imagen 7",
+  },
+  {
+    image: "/images/other/other (4).jpg",
+    alt: "Imagen 8",
+    text: "Texto de la imagen ",
+  },
+  {
+    image: "/images/other/other (6).jpg",
+    alt: "Imagen 9",
+    text: "Texto de la imagen 6",
+  },
+  {
+    image: "/images/other/other (7).jpg",
+    alt: "Imagen 10",
     text: "Texto de la imagen 6",
   },
 ];
 
 export const offerSliderData = [
-  { image: "/images/banner/sliderMain (3).jpeg" },
-  { image: "/images/banner/sliderMain (4).jpeg" },
+  {
+    image: "/images/other/other (4).jpg",
+    text: "Pescados frescos seleccionados a $8999/kg",
+  },
+  {
+    image: "/images/other/other (6).jpg",
+    text: "Promo exclusiva por tiempo limitado",
+  },
 ];
 
 export const contactInfoData = {

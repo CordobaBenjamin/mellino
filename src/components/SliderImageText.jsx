@@ -59,6 +59,7 @@ export default function SliderImageText() {
             Nuestra calidad y frescura han llamado la atención de los medios. Aquí te
             compartimos algunos momentos en los que nuestra pescadería se destaca en
             televisión.
+              <br/>
             <strong className="text-blue-950">
               ¡Orgullosos de ofrecer lo mejor del mar a tu mesa!{" "}
             </strong>

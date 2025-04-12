@@ -5,7 +5,7 @@ import { Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/autoplay";
 import Image from "next/image";
-import { offerSliderData } from "@/data/sliderData";
+import {offerSliderData} from "@/data/sliderData";
 
 function LoadingSpinner() {
     return (
@@ -19,6 +19,7 @@ export default function OfferPopup() {
     const [showPopup, setShowPopup] = useState(true);
     const [isLoading, setIsLoading] = useState(true);
     const [error, setError] = useState(null);
+    const [currentIndex, setCurrentIndex] = useState(0);
 
     useEffect(() => {
         try {
@@ -43,7 +44,7 @@ export default function OfferPopup() {
                 <div className="flex justify-end">
                     <button
                         onClick={() => setShowPopup(false)}
-                        className="text-gray-500 hover:text-gray-700 text-2xl"
+                        className="text-gray-500 hover:text-gray-700 text-2xl cursor-pointer"
                     >
                         ✖
                     </button>
@@ -54,29 +55,30 @@ export default function OfferPopup() {
                     <p className="text-center text-red-500">{error}</p>
                 ) : (
                     <div className="w-full h-full overflow-hidden relative">
+                        <div className="text-center font-bold text-blue-600 mb-2 text-xl">
+                            SOLO POR ESTA SEMANA, NUESTROS PESCADOS A $8999/KG
+                        </div>
                         <Swiper
                             loop
                             autoplay={{ delay: 3000, disableOnInteraction: false }}
+                            onSlideChange={(swiper) => setCurrentIndex(swiper.realIndex)}
                             modules={[Autoplay]}
                             className="w-full h-full rounded-lg shadow mb-2"
                         >
                             {offerSliderData.map((item, index) => (
                                 <SwiperSlide key={index}>
                                     <div className="relative w-full" style={{ paddingTop: "50%" }}>
-                                        <Image
-                                            src={item.image}
-                                            alt={`Oferta ${index + 1}`}
-                                            fill
-                                        />
+                                        <Image src={item.image} alt={`Oferta ${index + 1}`} fill />
                                     </div>
                                 </SwiperSlide>
+
                             ))}
                         </Swiper>
+                        <div className="text-center text-gray-700 font-medium mt-2">
+                            {offerSliderData[currentIndex]?.text}
+                        </div>
                     </div>
                 )}
-                <div className="text-center font-bold text-blue-600 mt-2 text-xl">
-                    SOLO POR ESTA SEMANA, NUESTROS PESCADOS A $8999/KG
-                </div>
             </div>
         </div>
     );

@@ -18,7 +18,7 @@ import DiscountWheelPopup from "@/components/DiscountWheel";
 export default function Home() {
   return (
     <main className="min-h-screen bg-blue-50">
-      <DiscountWheelPopup />
+      {/*<DiscountWheelPopup />*/}
       <OfferPopup />
 
       <section className="fixed bottom-4 right-4 z-50">
